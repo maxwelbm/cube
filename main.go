@@ -16,7 +16,7 @@ var (
   zBuffer = make([]float64, 160 * 44)
   buffer = make([]byte, 160 * 44)
 
-  backgroundASCIICode int = ' '
+  backgroundASCIICode int = '.'
   distanceFromCam int = 100
   horizontalOffset float64
   K1 float64 = 40;
@@ -90,34 +90,34 @@ func main() {
       }
     }
 
-    // cubeWidth = 10;
-    // horizontalOffset = 1 * float64(cubeWidth)    
+    cubeWidth = 10;
+    horizontalOffset = 1 * float64(cubeWidth)    
 
-    // // second cube
-    // for cubeX := float32(-cubeWidth); cubeX < float32(cubeWidth); cubeX += float32(incrementSpeed) {
-    //   for cubeY := float32(-cubeWidth); cubeY < float32(cubeWidth); cubeY += float32(incrementSpeed) {
-    //     calculateForSurface(cubeX, cubeY, float32(-cubeWidth), '@');
-    //     calculateForSurface(float32(cubeWidth), cubeY, cubeX, '$');
-    //     calculateForSurface(float32(-cubeWidth), cubeY, -cubeX, '~');
-    //     calculateForSurface(-cubeX, cubeY, float32(cubeWidth), '#');
-    //     calculateForSurface(cubeX, float32(-cubeWidth), -cubeY, ';');
-    //     calculateForSurface(cubeX, float32(cubeWidth), cubeY, '+');
-    //   }
-    // }
+    // second cube
+    for cubeX := float32(-cubeWidth); cubeX < float32(cubeWidth); cubeX += float32(incrementSpeed) {
+      for cubeY := float32(-cubeWidth); cubeY < float32(cubeWidth); cubeY += float32(incrementSpeed) {
+        calculateForSurface(cubeX, cubeY, float32(-cubeWidth), '@');
+        calculateForSurface(float32(cubeWidth), cubeY, cubeX, '$');
+        calculateForSurface(float32(-cubeWidth), cubeY, -cubeX, '~');
+        calculateForSurface(-cubeX, cubeY, float32(cubeWidth), '#');
+        calculateForSurface(cubeX, float32(-cubeWidth), -cubeY, ';');
+        calculateForSurface(cubeX, float32(cubeWidth), cubeY, '+');
+      }
+    }
 
-    // cubeWidth = 5;
-    // horizontalOffset = 8 * float64(cubeWidth)
-    // // third cube
-    // for cubeX := float32(-cubeWidth); cubeX < float32(cubeWidth); cubeX += float32(incrementSpeed) {
-    //   for cubeY := float32(-cubeWidth); cubeY < float32(cubeWidth); cubeY += float32(incrementSpeed) {
-    //     calculateForSurface(cubeX, cubeY, float32(-cubeWidth), '@');
-    //     calculateForSurface(float32(cubeWidth), cubeY, cubeX, '$');
-    //     calculateForSurface(float32(-cubeWidth), cubeY, -cubeX, '~');
-    //     calculateForSurface(-cubeX, cubeY, float32(cubeWidth), '#');
-    //     calculateForSurface(cubeX, float32(-cubeWidth), -cubeY, ';');
-    //     calculateForSurface(cubeX, float32(cubeWidth), cubeY, '+');
-    //   }
-    // }
+    cubeWidth = 5;
+    horizontalOffset = 8 * float64(cubeWidth)
+    // third cube
+    for cubeX := float32(-cubeWidth); cubeX < float32(cubeWidth); cubeX += float32(incrementSpeed) {
+      for cubeY := float32(-cubeWidth); cubeY < float32(cubeWidth); cubeY += float32(incrementSpeed) {
+        calculateForSurface(cubeX, cubeY, float32(-cubeWidth), '@');
+        calculateForSurface(float32(cubeWidth), cubeY, cubeX, '$');
+        calculateForSurface(float32(-cubeWidth), cubeY, -cubeX, '~');
+        calculateForSurface(-cubeX, cubeY, float32(cubeWidth), '#');
+        calculateForSurface(cubeX, float32(-cubeWidth), -cubeY, ';');
+        calculateForSurface(cubeX, float32(cubeWidth), cubeY, '+');
+      }
+    }
 
     fmt.Print("\x1b[H")
     for k := 0; k < width*height; k++ {
