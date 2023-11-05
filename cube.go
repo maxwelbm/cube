@@ -1,4 +1,4 @@
-package cube
+package main
 
 import (
 	"fmt"
@@ -58,8 +58,7 @@ func calculateForSurface(cubeX, cubeY, cubeZ float32, ch int) {
 	}
 }
 
-// Cube 3D ASCII rotation
-func Cube() {
+func main() {
 	fmt.Print("\033[2J")
 	for {
 		// Clear screen
