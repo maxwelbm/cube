@@ -3,8 +3,8 @@
 Cubo 3D ASCII
 
 References: 
-- https://en.wikipedia.org/wiki/Rotation_matrix
-- https://www.symbolab.com/solver/matrix-calculator 
+- [Wiki - Rotation Matrix](https://en.wikipedia.org/wiki/Rotation_matrix)
+- [Symbolab - Matrix Calculator](https://www.symbolab.com/solver/matrix-calculator)
 
 ## License
 
