@@ -2,7 +2,7 @@
 
 Cubo 3D ASCII
 
-Reference: 
+References: 
 - https://en.wikipedia.org/wiki/Rotation_matrix
 - https://www.symbolab.com/solver/matrix-calculator 
 
